@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Collections — Casual, Ethnic, Sports, Party &amp; Winter | WearX</title>
+  <meta name="description" content="Explore WearX's curated fashion collections: Casual Wear, Ethnic Kurtas, Sportswear, Party Wear, and Winter Jackets for Men &amp; Women. Shop online from Southwest Delhi. Free delivery above ₹999.">
+  <meta name="keywords" content="WearX collections, buy clothes online Delhi, casual wear, ethnic wear men women, sportswear India, party wear blazers, winter wear puffer jackets">
+  <link rel="canonical" href="https://www.wearthexp.co.in/collections.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wearthexp.co.in/collections.html">
+  <meta property="og:title" content="WearX Collections — Shop Casual, Ethnic, Sportswear, Party &amp; Winter">
+  <meta property="og:description" content="Find your fit in under 3 clicks. Premium earth-toned fashion crafted for Delhi's dynamic lifestyle.">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.wearthexp.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Collections",
+        "item": "https://www.wearthexp.co.in/collections.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Category Filter Bar */
+    .filter-bar {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding: 0.5rem 0 1.5rem;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      justify-content: flex-start;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .filter-bar::-webkit-scrollbar {
+      display: none;
+    }
+    .filter-btn {
+      padding: 0.55rem 1.25rem;
+      border-radius: var(--radius-full);
+      background-color: var(--color-white);
+      border: 1.5px solid var(--color-border);
+      color: var(--color-text-main);
+      font-size: 0.88rem;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+    .filter-btn.active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    /* Size Selector on Card */
+    .product-size-select {
+      display: flex;
+      gap: 0.35rem;
+      margin: 0.5rem 0 0.85rem;
+    }
+    .size-btn {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-bg-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .size-btn:hover, .size-btn.active {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
+
+    .card-actions-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: auto;
+      padding-top: 0.75rem;
+    }
+    .card-actions-row .btn {
+      flex: 1;
+      padding: 0.6rem 0.5rem;
+      font-size: 0.82rem;
+    }
+
+    @media (min-width: 768px) {
+      .filter-bar {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <aside class="announce-bar" aria-label="Store Announcement">
+    <div class="container">
+      🛍️ <strong>Southwest Delhi Special:</strong> Free Same-Day Express Delivery on orders above ₹999.
+      <a href="contact.html">Store Location →</a>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="WearX Home">
+        <div class="brand__icon" aria-hidden="true">W</div>
+        <div class="brand__text">
+          <span class="brand__name">WearX</span>
+          <span class="brand__tagline">Wear the Vibe</span>
+        </div>
+      </a>
+
+      <!-- Header Utilities -->
+      <div class="header__utils">
+        <!-- Cart Button -->
+        <a href="cart.html" class="header__cart-btn" aria-label="View shopping cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-badge" data-count="0"></span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Nav Backdrop -->
+      <div class="nav__backdrop" aria-hidden="true"></div>
+
+      <!-- Navigation -->
+      <nav id="primary-nav" class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="collections.html" class="nav__link active">Collections</a></li>
+          <li><a href="about.html" class="nav__link">About Us</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="cart.html" class="btn btn-accent btn-sm header__cta-desktop">View Cart</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Subpage Hero -->
+    <section class="page-hero" aria-labelledby="collections-page-title">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Collections</span>
+        </nav>
+        <h1 id="collections-page-title" class="page-hero__title" data-anim="words">
+          The <span>WearX Lookbook</span>
+        </h1>
+        <p class="page-hero__desc">
+          Browse our 5 signature categories. Every product is reachable within 3 clicks. Select your size, tap "Add to Cart", or enquire for bulk custom sizing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-bar" role="tablist" aria-label="Filter products by category">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Pieces (15)</button>
+          <button type="button" class="filter-btn" data-filter="casual" role="tab" aria-selected="false">Casual Wear</button>
+          <button type="button" class="filter-btn" data-filter="ethnic" role="tab" aria-selected="false">Ethnic Wear</button>
+          <button type="button" class="filter-btn" data-filter="sportswear" role="tab" aria-selected="false">Sportswear</button>
+          <button type="button" class="filter-btn" data-filter="party" role="tab" aria-selected="false">Party Wear</button>
+          <button type="button" class="filter-btn" data-filter="winter" role="tab" aria-selected="false">Winter / Seasonal</button>
+        </div>
+
+        <!-- Product Grid (All 15 Products across 5 categories) -->
+        <div class="card-grid card-grid--3col" id="productGrid">
+
+          <!-- ================= CASUAL WEAR ================= -->
+          <!-- Casual 1 -->
+          <article class="product-card" data-category="casual" data-product data-product-id="wx-c01" data-product-name="Olive Oversized Fleece Hoodie" data-product-price="1299" data-product-category="Casual Wear" data-product-image="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=530&fit=crop&q=80" alt="Olive oversized hoodie" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Casual</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Casual Wear • Unisex</span>
+              <h3 class="product-card__name">Olive Oversized Fleece Hoodie</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Heavyweight 380 GSM brushed fleece. Relaxed street silhouette with kangaroo pocket.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,299</span>
+                <span class="product-card__old-price">₹1,899</span>
+                <span class="product-card__discount">32% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Casual 2 -->
+          <article class="product-card" data-category="casual" data-product data-product-id="wx-c02" data-product-name="Beige Relaxed Linen Cargo Pants" data-product-price="1199" data-product-category="Casual Wear" data-product-image="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=530&fit=crop&q=80" data-product-size="32">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=530&fit=crop&q=80" alt="Beige linen cargo trousers" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Trending</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Casual Wear • Men &amp; Women</span>
+              <h3 class="product-card__name">Beige Relaxed Linen Cargo Pants</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Pure cotton-linen blend with 6 utility pockets and drawstring elastic waist.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="30">30</button>
+                <button type="button" class="size-btn active" data-size="32">32</button>
+                <button type="button" class="size-btn" data-size="34">34</button>
+                <button type="button" class="size-btn" data-size="36">36</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,199</span>
+                <span class="product-card__old-price">₹1,699</span>
+                <span class="product-card__discount">29% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Casual 3 -->
+          <article class="product-card" data-category="casual" data-product data-product-id="wx-c03" data-product-name="Terracotta Boxy Graphic Tee" data-product-price="699" data-product-category="Casual Wear" data-product-image="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=400&h=530&fit=crop&q=80" alt="Terracotta colored boxy graphic t-shirt" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Essential</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Casual Wear • Unisex</span>
+              <h3 class="product-card__name">Terracotta Boxy Graphic Tee</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">240 GSM pre-shrunk combed cotton. Minimalist WearX typographic print on chest.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹699</span>
+                <span class="product-card__old-price">₹999</span>
+                <span class="product-card__discount">30% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= ETHNIC WEAR ================= -->
+          <!-- Ethnic 1 -->
+          <article class="product-card" data-category="ethnic" data-product data-product-id="wx-e01" data-product-name="Terracotta Handloom Chikankari Kurta" data-product-price="1599" data-product-category="Ethnic Wear" data-product-image="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=530&fit=crop&q=80" alt="Terracotta handloom chikankari kurta" width="400" height="530" loading="lazy">
+              <span class="product-card__tag product-card__tag--olive">Handcrafted</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ethnic Wear • Festive</span>
+              <h3 class="product-card__name">Terracotta Chikankari Kurta</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Authentic Lucknowi hand embroidery on breathable pure cotton. Mandarin collar.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="38">38</button>
+                <button type="button" class="size-btn active" data-size="40">40</button>
+                <button type="button" class="size-btn" data-size="42">42</button>
+                <button type="button" class="size-btn" data-size="44">44</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,599</span>
+                <span class="product-card__old-price">₹2,199</span>
+                <span class="product-card__discount">27% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ethnic 2 -->
+          <article class="product-card" data-category="ethnic" data-product data-product-id="wx-e02" data-product-name="Olive Raw Silk Nehru Jacket" data-product-price="1899" data-product-category="Ethnic Wear" data-product-image="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=530&fit=crop&q=80" data-product-size="40">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=530&fit=crop&q=80" alt="Olive green raw silk nehru jacket" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Premium</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ethnic Wear • Formal</span>
+              <h3 class="product-card__name">Olive Raw Silk Nehru Jacket</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Sleeveless tailored bandhgala with antique brass buttons. Perfect over kurtas.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="38">38</button>
+                <button type="button" class="size-btn active" data-size="40">40</button>
+                <button type="button" class="size-btn" data-size="42">42</button>
+                <button type="button" class="size-btn" data-size="44">44</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,899</span>
+                <span class="product-card__old-price">₹2,599</span>
+                <span class="product-card__discount">27% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ethnic 3 -->
+          <article class="product-card" data-category="ethnic" data-product data-product-id="wx-e03" data-product-name="Beige Anarkali Kurti &amp; Dupatta Set" data-product-price="2199" data-product-category="Ethnic Wear" data-product-image="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=530&fit=crop&q=80" alt="Beige anarkali kurti suit set" width="400" height="530" loading="lazy">
+              <span class="product-card__tag product-card__tag--olive">Bestseller</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Ethnic Wear • Women</span>
+              <h3 class="product-card__name">Beige Anarkali Kurti Set</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Flared Chanderi cotton anarkali paired with zari-bordered organza dupatta.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹2,199</span>
+                <span class="product-card__old-price">₹2,999</span>
+                <span class="product-card__discount">26% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= SPORTSWEAR ================= -->
+          <!-- Sport 1 -->
+          <article class="product-card" data-category="sportswear" data-product data-product-id="wx-s01" data-product-name="Dri-Fit Aero Performance Tee" data-product-price="899" data-product-category="Sportswear" data-product-image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=530&fit=crop&q=80" alt="Athletic performance gym t-shirt" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Active</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Sportswear • Gym &amp; Running</span>
+              <h3 class="product-card__name">Dri-Fit Aero Performance Tee</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">4-way stretch moisture-wicking poly-spandex. Anti-odor silver-ion finish.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹899</span>
+                <span class="product-card__old-price">₹1,299</span>
+                <span class="product-card__discount">31% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sport 2 -->
+          <article class="product-card" data-category="sportswear" data-product data-product-id="wx-s02" data-product-name="Tapered Fit Athleisure Joggers" data-product-price="1099" data-product-category="Sportswear" data-product-image="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=400&h=530&fit=crop&q=80" alt="Athletic training joggers" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Workout</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Sportswear • Training</span>
+              <h3 class="product-card__name">Tapered Fit Athleisure Joggers</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Cuffed ankle bottoms with zipper security pockets. Built for workouts and lounge.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,099</span>
+                <span class="product-card__old-price">₹1,599</span>
+                <span class="product-card__discount">31% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sport 3 -->
+          <article class="product-card" data-category="sportswear" data-product data-product-id="wx-s03" data-product-name="Seamless Active Compression Set" data-product-price="1499" data-product-category="Sportswear" data-product-image="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=530&fit=crop&q=80" data-product-size="S">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=530&fit=crop&q=80" alt="Seamless active sports compression bra and leggings" width="400" height="530" loading="lazy">
+              <span class="product-card__tag product-card__tag--olive">Co-ord Set</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Sportswear • Women Active</span>
+              <h3 class="product-card__name">Seamless Active Set</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">High-waisted compression tights + padded sports bra. Sweat-wicking knit.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn active" data-size="S">S</button>
+                <button type="button" class="size-btn" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,499</span>
+                <span class="product-card__old-price">₹2,099</span>
+                <span class="product-card__discount">28% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= PARTY WEAR ================= -->
+          <!-- Party 1 -->
+          <article class="product-card" data-category="party" data-product data-product-id="wx-p01" data-product-name="Sequin Evening Blazer — Midnight" data-product-price="2999" data-product-category="Party Wear" data-product-image="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&h=530&fit=crop&q=80" alt="Black sequin party blazer" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Glamour</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Party Wear • Club &amp; Night</span>
+              <h3 class="product-card__name">Sequin Evening Blazer</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Subtle micro-sequins with satin peak lapels. Statement cocktail party piece.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹2,999</span>
+                <span class="product-card__old-price">₹4,199</span>
+                <span class="product-card__discount">29% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Party 2 -->
+          <article class="product-card" data-category="party" data-product data-product-id="wx-p02" data-product-name="Velvet Bodycon Midi Dress — Wine" data-product-price="1999" data-product-category="Party Wear" data-product-image="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=530&fit=crop&q=80" alt="Wine red velvet evening party dress" width="400" height="530" loading="lazy">
+              <span class="product-card__tag product-card__tag--olive">Party Hit</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Party Wear • Women</span>
+              <h3 class="product-card__name">Velvet Bodycon Midi Dress</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Plush stretch velvet with asymmetric cowl neck and side slit. Head-turner.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="XS">XS</button>
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,999</span>
+                <span class="product-card__old-price">₹2,799</span>
+                <span class="product-card__discount">28% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Party 3 -->
+          <article class="product-card" data-category="party" data-product data-product-id="wx-p03" data-product-name="Satin Cuban Collar Shirt — Gold" data-product-price="1299" data-product-category="Party Wear" data-product-image="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=530&fit=crop&q=80" data-product-size="L">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=530&fit=crop&q=80" alt="Gold satin cuban collar party shirt" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Cocktail</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Party Wear • Men</span>
+              <h3 class="product-card__name">Satin Cuban Collar Shirt</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Silky fluid drape with notch collar and chest pocket. Nightlife essential.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn" data-size="M">M</button>
+                <button type="button" class="size-btn active" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,299</span>
+                <span class="product-card__old-price">₹1,799</span>
+                <span class="product-card__discount">28% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================= WINTER / SEASONAL WEAR ================= -->
+          <!-- Winter 1 -->
+          <article class="product-card" data-category="winter" data-product data-product-id="wx-w01" data-product-name="Fleece-Lined Puffer Jacket — Espresso" data-product-price="2499" data-product-category="Winter Wear" data-product-image="https://images.unsplash.com/photo-1544923246-77307dd270b5?w=400&h=530&fit=crop&q=80" data-product-size="L">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1544923246-77307dd270b5?w=400&h=530&fit=crop&q=80" alt="Brown winter puffer jacket" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Winter Drop</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Winter Wear • Heavy Thermal</span>
+              <h3 class="product-card__name">Fleece-Lined Puffer Jacket</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Water-repellent matte outer with down-alternative filling. Rated to 5°C.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="M">M</button>
+                <button type="button" class="size-btn active" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+                <button type="button" class="size-btn" data-size="XXL">XXL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹2,499</span>
+                <span class="product-card__old-price">₹3,499</span>
+                <span class="product-card__discount">29% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Winter 2 -->
+          <article class="product-card" data-category="winter" data-product data-product-id="wx-w02" data-product-name="Wool Blend Oversized Trench Coat" data-product-price="3299" data-product-category="Winter Wear" data-product-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=530&fit=crop&q=80" alt="Long wool blend trench coat in camel beige" width="400" height="530" loading="lazy">
+              <span class="product-card__tag product-card__tag--olive">Luxury</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Winter Wear • Overcoats</span>
+              <h3 class="product-card__name">Wool Blend Trench Coat</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Double-breasted trench in signature camel sand with belt &amp; tortoiseshell buttons.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹3,299</span>
+                <span class="product-card__old-price">₹4,599</span>
+                <span class="product-card__discount">28% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Winter 3 -->
+          <article class="product-card" data-category="winter" data-product data-product-id="wx-w03" data-product-name="Ribbed Turtleneck Knit Sweater" data-product-price="1399" data-product-category="Winter Wear" data-product-image="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=530&fit=crop&q=80" data-product-size="M">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=530&fit=crop&q=80" alt="Ribbed turtleneck knit sweater in olive green" width="400" height="530" loading="lazy">
+              <span class="product-card__tag">Cozy</span>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__category">Winter Wear • Knitwear</span>
+              <h3 class="product-card__name">Ribbed Turtleneck Sweater</h3>
+              <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:0.5rem;">Chunky wool-cotton rib knit. Snug neckline for chilly Delhi evenings.</p>
+              
+              <div class="product-size-select" aria-label="Select size">
+                <button type="button" class="size-btn" data-size="S">S</button>
+                <button type="button" class="size-btn active" data-size="M">M</button>
+                <button type="button" class="size-btn" data-size="L">L</button>
+                <button type="button" class="size-btn" data-size="XL">XL</button>
+              </div>
+
+              <div class="product-card__price">
+                <span class="product-card__current-price">₹1,399</span>
+                <span class="product-card__old-price">₹1,999</span>
+                <span class="product-card__discount">30% OFF</span>
+              </div>
+
+              <div class="card-actions-row">
+                <button type="button" class="btn btn-accent" data-add-cart>Add to Cart</button>
+                <button type="button" class="btn btn-outline" data-open-modal="enquiry">Enquire</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Custom Order Banner -->
+        <div class="cta-banner" style="margin-top: 4rem;">
+          <h2 class="cta-banner__title">Looking for Sizing Customization or Bulk Corporate Gifting?</h2>
+          <p class="cta-banner__desc">We provide tailor-fitted sizes from XS to 5XL and custom branded apparel for college societies, corporate teams, and weddings across Southwest Delhi.</p>
+          <div class="cta-banner__actions">
+            <button type="button" class="btn btn-primary" data-open-modal="enquiry">Request Bulk / Custom Quote</button>
+            <a href="contact.html" class="btn btn-outline-white">Visit Store at Dashrathpuri Metro</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 1rem;">
+            <div class="brand__icon" aria-hidden="true">W</div>
+            <div class="brand__text">
+              <span class="brand__name" style="color: #fff;">WearX</span>
+              <span class="brand__tagline" style="color: #94a3b8;">Wear the Vibe</span>
+            </div>
+          </div>
+          <p>Southwest Delhi's freshest fashion brand. Curated casual, ethnic, sportswear, party, and winter collections for men &amp; women who refuse to blend in.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/wearthexp.co.in" target="_blank" rel="noopener noreferrer" aria-label="WearX Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/wearthexp.co.in" target="_blank" rel="noopener noreferrer" aria-label="WearX Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/wearx" target="_blank" rel="noopener noreferrer" aria-label="WearX LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collections.html" class="footer-link">All Collections</a></li>
+            <li><a href="about.html" class="footer-link">About WearX</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="collections.html#casual" class="footer-link">Casual Wear</a></li>
+            <li><a href="collections.html#ethnic" class="footer-link">Ethnic Wear</a></li>
+            <li><a href="collections.html#sportswear" class="footer-link">Sportswear</a></li>
+            <li><a href="collections.html#party" class="footer-link">Party Wear</a></li>
+            <li><a href="collections.html#winter" class="footer-link">Winter Wear</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">📍 Shop Number 11, Ground Floor, near Dashrathpuri Metro Station, Southwest Delhi</span></li>
+            <li><a href="tel:+919599783742" class="footer-link">📞 +91 95997 83742</a></li>
+            <li><a href="mailto:sahilgoyal7437@gmail.com" class="footer-link">✉️ sahilgoyal7437@gmail.com</a></li>
+            <li><span class="footer-link">🕐 Mon-Sat: 10 AM – 6 PM | Sun: 11 AM – 4 PM</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 WearX. All Rights Reserved. Southwest Delhi, India.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="contact.html">Store Locator</a>
+          <span>•</span>
+          <a href="cart.html">View Cart</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enquiry Modal -->
+  <div class="modal-overlay" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(26,19,16,0.7);z-index:2000;padding:1.25rem;backdrop-filter:blur(4px);">
+    <div class="modal-card" style="background:#fff;border-radius:var(--radius-lg);max-width:500px;width:100%;max-height:90vh;overflow-y:auto;padding:2rem 1.5rem;position:relative;box-shadow:var(--shadow-xl);">
+      <button type="button" class="modal-close" aria-label="Close dialog" style="position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:var(--color-beige);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--color-text-muted);">&times;</button>
+
+      <div class="lead-card__header">
+        <span class="section-eyebrow">Custom Enquiry</span>
+        <h3 id="modal-title" class="lead-card__title">Bulk Orders &amp; Custom Requests</h3>
+        <p class="lead-card__subtitle">Fill in your details. Our team will respond within 24 hours.</p>
+      </div>
+
+      <form data-form="enquiry" id="modal-enquiry-form" novalidate>
+        <div class="form-group">
+          <label for="modal-fullName" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="modal-fullName" name="fullName" class="form-control" placeholder="e.g., Sahil Goyal" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="form-control" placeholder="e.g., 9599783742" maxlength="10" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-email" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="modal-email" name="email" class="form-control" placeholder="e.g., sahilgoyal7437@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-interest" class="form-label">What are you looking for?</label>
+          <select id="modal-interest" name="interest" class="form-control">
+            <option value="Bulk Order">Bulk Order (10+ pieces)</option>
+            <option value="Custom Embroidery / Print">Custom Embroidery / Print</option>
+            <option value="Corporate Gifting">Corporate Gifting</option>
+            <option value="Wholesale Partnership">Wholesale / Reseller Partnership</option>
+            <option value="General Question">General Question</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modal-message" class="form-label">Message</label>
+          <textarea id="modal-message" name="message" class="form-control" rows="3" placeholder="Tell us what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent btn-block">Submit Enquiry</button>
+        <div class="form-feedback" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919599783742?text=Hi%20WearX!%20I%27d%20like%20to%20know%20more%20about%20your%20collections."
+     class="floating-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with WearX on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 2C6.495 2 2 6.493 2 12.029c0 1.97.57 3.81 1.558 5.362L2 22l4.767-1.523A9.972 9.972 0 0 0 12.031 22c5.536 0 10.031-4.494 10.031-10.029C22.062 6.493 17.567 2 12.031 2zm5.836 14.199c-.244.686-1.42 1.314-1.956 1.393-.509.076-1.171.109-3.791-.973-3.149-1.3-5.183-4.502-5.34-4.71-.157-.208-1.277-1.699-1.277-3.241 0-1.542.808-2.302 1.096-2.614.288-.312.63-.39.84-.39.21 0 .42.002.604.011.196.01.458-.074.717.547.262.628.895 2.186.973 2.344.079.157.132.342.026.551-.105.208-.157.338-.314.522-.157.183-.331.409-.472.549-.157.156-.32.327-.138.64.183.313.815 1.344 1.748 2.174 1.199 1.069 2.21 1.399 2.523 1.556.314.157.498.131.682-.079.184-.209.786-.913.996-1.226.21-.313.42-.261.708-.157.288.105 1.833.864 2.148 1.021.314.157.524.235.603.366.079.131.079.76-.165 1.446z"/>
+    </svg>
+  </a>
+
+  <!-- Script with Instant Category Filter Logic -->
+  <script src="script.js?v=2.2"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Category filter buttons
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var cards = document.querySelectorAll('#productGrid .product-card');
+
+      function filterCategory(cat) {
+        filterBtns.forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-filter') === cat);
+        });
+        cards.forEach(function (card) {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filterCategory(this.getAttribute('data-filter'));
+        });
+      });
+
+      // Handle direct hash navigation e.g. collections.html#winter
+      if (window.location.hash) {
+        var hash = window.location.hash.replace('#', '');
+        if (['casual', 'ethnic', 'sportswear', 'party', 'winter'].includes(hash)) {
+          filterCategory(hash);
+        }
+      }
+
+      // Interactive Size selector per card
+      document.querySelectorAll('.product-size-select').forEach(function (wrap) {
+        var card = wrap.closest('[data-product]');
+        wrap.querySelectorAll('.size-btn').forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            wrap.querySelectorAll('.size-btn').forEach(function (b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            if (card) {
+              card.setAttribute('data-product-size', btn.getAttribute('data-size'));
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About WearX — The Story Behind the Vibe | Southwest Delhi</title>
+  <meta name="description" content="Learn how WearX grew from a boutique design studio in Southwest Delhi into an online fashion brand crafting premium casual, ethnic, sports, party and winter wear with sustainable natural fabrics.">
+  <meta name="keywords" content="About WearX, Delhi fashion brand, sustainable clothing Delhi, Southwest Delhi clothing brand, WearX founders, ethical fashion India">
+  <link rel="canonical" href="https://www.wearthexp.co.in/about.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wearthexp.co.in/about.html">
+  <meta property="og:title" content="About WearX — Fashion That Speaks Your Vibe">
+  <meta property="og:description" content="Discover our journey, our artisanal tailors in Delhi, and our pledge for natural, breathable fabrics.">
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.wearthexp.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://www.wearthexp.co.in/about.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .story-img-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 3;
+    }
+    .story-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .value-box {
+      background: var(--color-white);
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .value-box h3 {
+      color: var(--color-primary);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+    .value-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+    .founder-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-fast);
+    }
+    .founder-card:hover {
+      transform: translateY(-4px);
+    }
+    .founder-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      object-fit: cover;
+      box-shadow: var(--shadow-md);
+    }
+    .founder-name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    .founder-role {
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+    .founder-bio {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+
+    @media (min-width: 768px) {
+      .story-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .card-grid--3col {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <aside class="announce-bar" aria-label="Store Announcement">
+    <div class="container">
+      🌿 <strong>Conscious Fashion:</strong> 100% natural fabrics, zero plastic packaging, crafted in Southwest Delhi.
+      <a href="collections.html">Explore Lookbook →</a>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="WearX Home">
+        <div class="brand__icon" aria-hidden="true">W</div>
+        <div class="brand__text">
+          <span class="brand__name">WearX</span>
+          <span class="brand__tagline">Wear the Vibe</span>
+        </div>
+      </a>
+
+      <!-- Header Utilities -->
+      <div class="header__utils">
+        <!-- Cart Button -->
+        <a href="cart.html" class="header__cart-btn" aria-label="View shopping cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-badge" data-count="0"></span>
+        </a>
+
+        <!-- Hamburger -->
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Nav Backdrop -->
+      <div class="nav__backdrop" aria-hidden="true"></div>
+
+      <!-- Navigation -->
+      <nav id="primary-nav" class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="collections.html" class="nav__link">Collections</a></li>
+          <li><a href="about.html" class="nav__link active">About Us</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="collections.html" class="btn btn-accent btn-sm header__cta-desktop">Shop Now</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Subpage Hero -->
+    <section class="page-hero" aria-labelledby="about-page-title">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">About Us</span>
+        </nav>
+        <h1 id="about-page-title" class="page-hero__title" data-anim="words">
+          Crafting Clothes with <span>Soul &amp; Substance</span>
+        </h1>
+        <p class="page-hero__desc">
+          Born out of a small design studio in Southwest Delhi, WearX was created with a clear philosophy: you shouldn't have to choose between luxury aesthetics and honest craftsmanship.
+        </p>
+      </div>
+    </section>
+
+    <!-- Brand Genesis Story -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="story-grid">
+          <div>
+            <span class="section-eyebrow">Our Origins</span>
+            <h2 class="section-title" data-anim="words">From Delhi's Streets to Wardrobes Pan-India</h2>
+            <p style="font-size:1.02rem; color:var(--color-text-muted); line-height:1.7; margin-bottom:1.25rem;">
+              In 2022, tired of synthetic fast-fashion brands flooding the market with cheap polyesters and generic cuts, our founders set out to build an alternative right here in Southwest Delhi. We wanted clothing with weight, texture, and character.
+            </p>
+            <p style="font-size:0.95rem; color:var(--color-text-muted); line-height:1.7; margin-bottom:1.5rem;">
+              We took our cue from organic earth tones — the sunbaked terracotta of Delhi's pottery hubs, the muted olive leaves of Aravalli ridges, and the serene sandstone beige of Delhi's historic monuments. Today, WearX serves over 10,000 customers with everyday casuals, festive ethnics, performance sportswear, nightlife party outfits, and cozy winter outerwear.
+            </p>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="collections.html" class="btn btn-accent">Shop The Lookbook</a>
+              <button type="button" class="btn btn-outline" data-open-modal="enquiry">Partner With Us</button>
+            </div>
+          </div>
+
+          <div class="story-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=700&h=525&fit=crop&q=80" alt="WearX design studio and fabric cutting process" width="700" height="525" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our 3 Core Pillars -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Our Philosophy</span>
+          <h2 class="section-title" data-anim="words">The 3 Pillars of WearX</h2>
+          <p class="section-subtitle">What goes into every single garment we cut, sew, and ship.</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-box">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--color-beige); color:var(--color-accent); display:flex; align-items:center; justify-content:center; margin-bottom:1rem; font-size:1.25rem; font-weight:800;">1</div>
+            <h3>Pure &amp; Breathable Fabrics</h3>
+            <p>We say no to plastic-heavy polyesters. Our tees, kurtas, and trousers are cut from combed cotton, pure linen, and certified non-toxic dyes that breathe with your skin.</p>
+          </div>
+
+          <div class="value-box">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--color-beige); color:var(--color-accent); display:flex; align-items:center; justify-content:center; margin-bottom:1rem; font-size:1.25rem; font-weight:800;">2</div>
+            <h3>Local Artisan Empowerment</h3>
+            <p>Every piece is tailored by local master karigars in Delhi NCR. We pay fair wages, maintain humane workshop hours, and preserve traditional embroidery crafts like Lucknowi Chikankari.</p>
+          </div>
+
+          <div class="value-box">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--color-beige); color:var(--color-accent); display:flex; align-items:center; justify-content:center; margin-bottom:1rem; font-size:1.25rem; font-weight:800;">3</div>
+            <h3>The 3-Click Shopping Rule</h3>
+            <p>No endless checkout mazes or forced app downloads. We designed WearX so any customer can discover, inspect, and order their exact size in under 3 clicks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / Team Section -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The Minds Behind WearX</span>
+          <h2 class="section-title" data-anim="words">Meet the Creative Team</h2>
+          <p class="section-subtitle">Designers, fabric purists, and stylists based out of our Southwest Delhi studio.</p>
+        </div>
+
+        <div class="card-grid card-grid--3col">
+          <article class="founder-card">
+            <img class="founder-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&q=80" alt="Sahil Goyal - Creative Director &amp; Co-Founder" width="96" height="96" loading="lazy">
+            <h3 class="founder-name">Sahil Goyal</h3>
+            <div class="founder-role">Creative Director &amp; Co-Founder</div>
+            <p class="founder-bio">Spearheads WearX's artistic direction, earth-tone color palettes, and modern unisex fits tailored for Delhi's fashion-conscious generation.</p>
+          </article>
+
+          <article class="founder-card">
+            <img class="founder-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="Chirag Agarwal - Head of Sourcing" width="96" height="96" loading="lazy">
+            <h3 class="founder-name">Chirag Agarwal</h3>
+            <div class="founder-role">Head of Sourcing</div>
+            <p class="founder-bio">Expert in organic textile sourcing and artisan procurement. Oversees sustainable cotton and handloom fabrics across our Delhi manufacturing hubs.</p>
+          </article>
+
+          <article class="founder-card">
+            <img class="founder-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&h=200&fit=crop&q=80" alt="Hemant - Customer Experience and Stylist" width="96" height="96" loading="lazy">
+            <h3 class="founder-name">Hemant</h3>
+            <div class="founder-role">Customer Experience &amp; Stylist</div>
+            <p class="founder-bio">Guides personal studio styling consultations at our Dashrathpuri studio and ensures rapid order support and delivery coordination.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestone Stats Strip -->
+    <section class="section section--dark" style="padding:3.5rem 0; text-align:center;">
+      <div class="container">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:2rem;">
+          <div>
+            <div style="font-family:var(--font-heading); font-size:2.5rem; font-weight:800; color:var(--color-sand);">10,000+</div>
+            <div style="font-size:0.85rem; color:var(--color-beige-dark); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.25rem;">Happy Customers</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:2.5rem; font-weight:800; color:var(--color-sand);">99.2%</div>
+            <div style="font-size:0.85rem; color:var(--color-beige-dark); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.25rem;">Satisfaction Rate</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:2.5rem; font-weight:800; color:var(--color-sand);">5 Categories</div>
+            <div style="font-size:0.85rem; color:var(--color-beige-dark); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.25rem;">Curated Fashion</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-heading); font-size:2.5rem; font-weight:800; color:var(--color-sand);">24 Hrs</div>
+            <div style="font-size:0.85rem; color:var(--color-beige-dark); text-transform:uppercase; letter-spacing:0.06em; margin-top:0.25rem;">Delhi NCR Delivery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 1rem;">
+            <div class="brand__icon" aria-hidden="true">W</div>
+            <div class="brand__text">
+              <span class="brand__name" style="color: #fff;">WearX</span>
+              <span class="brand__tagline" style="color: #94a3b8;">Wear the Vibe</span>
+            </div>
+          </div>
+          <p>Southwest Delhi's freshest fashion brand. Curated casual, ethnic, sportswear, party, and winter collections for men &amp; women who refuse to blend in.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/wearthexp.co.in" target="_blank" rel="noopener noreferrer" aria-label="WearX Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/wearthexp.co.in" target="_blank" rel="noopener noreferrer" aria-label="WearX Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/wearx" target="_blank" rel="noopener noreferrer" aria-label="WearX LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collections.html" class="footer-link">All Collections</a></li>
+            <li><a href="about.html" class="footer-link">About WearX</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="collections.html#casual" class="footer-link">Casual Wear</a></li>
+            <li><a href="collections.html#ethnic" class="footer-link">Ethnic Wear</a></li>
+            <li><a href="collections.html#sportswear" class="footer-link">Sportswear</a></li>
+            <li><a href="collections.html#party" class="footer-link">Party Wear</a></li>
+            <li><a href="collections.html#winter" class="footer-link">Winter Wear</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">📍 Shop Number 11, Ground Floor, near Dashrathpuri Metro Station, Southwest Delhi</span></li>
+            <li><a href="tel:+919599783742" class="footer-link">📞 +91 95997 83742</a></li>
+            <li><a href="mailto:sahilgoyal7437@gmail.com" class="footer-link">✉️ sahilgoyal7437@gmail.com</a></li>
+            <li><span class="footer-link">🕐 Mon-Sat: 10 AM – 6 PM | Sun: 11 AM – 4 PM</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 WearX. All Rights Reserved. Southwest Delhi, India.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="contact.html">Store Locator</a>
+          <span>•</span>
+          <a href="cart.html">View Cart</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enquiry Modal -->
+  <div class="modal-overlay" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(26,19,16,0.7);z-index:2000;padding:1.25rem;backdrop-filter:blur(4px);">
+    <div class="modal-card" style="background:#fff;border-radius:var(--radius-lg);max-width:500px;width:100%;max-height:90vh;overflow-y:auto;padding:2rem 1.5rem;position:relative;box-shadow:var(--shadow-xl);">
+      <button type="button" class="modal-close" aria-label="Close dialog" style="position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:var(--color-beige);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--color-text-muted);">&times;</button>
+
+      <div class="lead-card__header">
+        <span class="section-eyebrow">Custom Enquiry</span>
+        <h3 id="modal-title" class="lead-card__title">Bulk Orders &amp; Custom Requests</h3>
+        <p class="lead-card__subtitle">Fill in your details. Our team will respond within 24 hours.</p>
+      </div>
+
+      <form data-form="enquiry" id="modal-enquiry-form" novalidate>
+        <div class="form-group">
+          <label for="modal-fullName" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="modal-fullName" name="fullName" class="form-control" placeholder="e.g., Sahil Goyal" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-phone" class="form-label">Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="modal-phone" name="phone" class="form-control" placeholder="e.g., 9599783742" maxlength="10" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-email" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="modal-email" name="email" class="form-control" placeholder="e.g., sahilgoyal7437@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="modal-interest" class="form-label">What are you looking for?</label>
+          <select id="modal-interest" name="interest" class="form-control">
+            <option value="Bulk Order">Bulk Order (10+ pieces)</option>
+            <option value="Custom Embroidery / Print">Custom Embroidery / Print</option>
+            <option value="Corporate Gifting">Corporate Gifting</option>
+            <option value="Wholesale Partnership">Wholesale / Reseller Partnership</option>
+            <option value="General Question">General Question</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modal-message" class="form-label">Message</label>
+          <textarea id="modal-message" name="message" class="form-control" rows="3" placeholder="Tell us what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent btn-block">Submit Enquiry</button>
+        <div class="form-feedback" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919599783742?text=Hi%20WearX!%20I%27d%20like%20to%20know%20more%20about%20your%20brand."
+     class="floating-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with WearX on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 2C6.495 2 2 6.493 2 12.029c0 1.97.57 3.81 1.558 5.362L2 22l4.767-1.523A9.972 9.972 0 0 0 12.031 22c5.536 0 10.031-4.494 10.031-10.029C22.062 6.493 17.567 2 12.031 2zm5.836 14.199c-.244.686-1.42 1.314-1.956 1.393-.509.076-1.171.109-3.791-.973-3.149-1.3-5.183-4.502-5.34-4.71-.157-.208-1.277-1.699-1.277-3.241 0-1.542.808-2.302 1.096-2.614.288-.312.63-.39.84-.39.21 0 .42.002.604.011.196.01.458-.074.717.547.262.628.895 2.186.973 2.344.079.157.132.342.026.551-.105.208-.157.338-.314.522-.157.183-.331.409-.472.549-.157.156-.32.327-.138.64.183.313.815 1.344 1.748 2.174 1.199 1.069 2.21 1.399 2.523 1.556.314.157.498.131.682-.079.184-.209.786-.913.996-1.226.21-.313.42-.261.708-.157.288.105 1.833.864 2.148 1.021.314.157.524.235.603.366.079.131.079.76-.165 1.446z"/>
+    </svg>
+  </a>
+
+  <script src="script.js?v=2.2"></script>
+</body>
+</html>

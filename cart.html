@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Shopping Bag &amp; Checkout | WearX Southwest Delhi</title>
+  <meta name="description" content="Review your WearX bag, apply discount codes, and checkout with Free Delhi NCR delivery on orders above ₹999. Fast 3-click checkout with Cash on Delivery or UPI.">
+  <link rel="canonical" href="https://www.wearthexp.co.in/cart.html">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+    .empty-cart-state {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .empty-cart-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.25rem;
+      color: var(--color-accent);
+      background: var(--color-beige);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .coupon-box {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+    .coupon-box input {
+      flex-grow: 1;
+      padding: 0.65rem 0.85rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+    }
+    .coupon-box button {
+      padding: 0.65rem 1.15rem;
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .cart-grid-layout {
+        grid-template-columns: 1.75fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Announcement Bar -->
+  <aside class="announce-bar" aria-label="Store Announcement">
+    <div class="container">
+      🎉 Apply code <strong>WEARX15</strong> at checkout for 15% off your entire bag!
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="WearX Home">
+        <div class="brand__icon" aria-hidden="true">W</div>
+        <div class="brand__text">
+          <span class="brand__name">WearX</span>
+          <span class="brand__tagline">Wear the Vibe</span>
+        </div>
+      </a>
+
+      <!-- Header Utilities -->
+      <div class="header__utils">
+        <a href="cart.html" class="header__cart-btn" aria-label="View shopping cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-badge" data-count="0"></span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav__backdrop" aria-hidden="true"></div>
+
+      <!-- Navigation -->
+      <nav id="primary-nav" class="nav" aria-label="Primary Navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="collections.html" class="nav__link">Collections</a></li>
+          <li><a href="about.html" class="nav__link">About Us</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="collections.html" class="btn btn-accent btn-sm header__cta-desktop">Continue Shopping</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <section class="page-hero" style="padding:2.5rem 0 3rem;">
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <a href="collections.html">Collections</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Your Bag</span>
+        </nav>
+        <h1 class="page-hero__title" data-anim="words">
+          Your <span>Shopping Bag</span>
+        </h1>
+        <p class="page-hero__desc">
+          Review selected garments, sizes, and quantities before placing your order.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cart Layout -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <!-- Container when Cart has items -->
+        <div id="cartFilledSection" style="display:none;">
+          <div class="cart-grid-layout">
+            
+            <!-- Items Table -->
+            <div style="background:#fff; border-radius:var(--radius-lg); padding:2rem; border:1px solid var(--color-border); box-shadow:var(--shadow-sm); overflow-x:auto;">
+              <table class="cart-table" id="cartItemsTable">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Populated dynamically via JS -->
+                </tbody>
+              </table>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--color-border); flex-wrap:wrap; gap:1rem;">
+                <a href="collections.html" class="btn btn-outline btn-sm">← Continue Shopping</a>
+                <button type="button" class="btn btn-sm" style="color:var(--color-danger); border:1px solid var(--color-danger);" onclick="window.WearXCart.clear(); renderCart();">Clear Bag</button>
+              </div>
+            </div>
+
+            <!-- Order Summary Card -->
+            <div>
+              <div class="cart-summary">
+                <h3>Order Summary</h3>
+
+                <div class="cart-summary-row">
+                  <span style="color:var(--color-text-muted);">Bag Subtotal</span>
+                  <span id="summarySubtotal" style="font-weight:700;">₹0</span>
+                </div>
+
+                <div class="cart-summary-row">
+                  <span style="color:var(--color-text-muted);">Delivery (Delhi NCR)</span>
+                  <span id="summaryDelivery" style="color:var(--color-olive); font-weight:700;">FREE</span>
+                </div>
+
+                <div class="cart-summary-row" id="discountRow" style="display:none; color:var(--color-olive);">
+                  <span>Discount (Coupon)</span>
+                  <span id="summaryDiscount">-₹0</span>
+                </div>
+
+                <div class="cart-summary-row total">
+                  <span>Estimated Total</span>
+                  <span id="summaryTotal" style="color:var(--color-accent);">₹0</span>
+                </div>
+
+                <!-- Coupon Input -->
+                <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px dashed var(--color-border);">
+                  <label for="couponInput" style="font-size:0.8rem; font-weight:700; color:var(--color-text-main); display:block; margin-bottom:0.25rem;">Have a Promo Code?</label>
+                  <div class="coupon-box">
+                    <input type="text" id="couponInput" placeholder="Try WEARX15" aria-label="Coupon code">
+                    <button type="button" id="applyCouponBtn">Apply</button>
+                  </div>
+                  <div id="couponMsg" style="font-size:0.75rem; margin-top:0.35rem; display:none;"></div>
+                </div>
+
+                <div style="margin-top:2rem;">
+                  <button type="button" class="btn btn-accent btn-block" id="proceedCheckoutBtn">
+                    Proceed to Checkout →
+                  </button>
+                  <p style="font-size:0.75rem; color:var(--color-text-muted); text-align:center; margin-top:0.75rem;">
+                    🔒 Safe &amp; Secure Checkout • Cash on Delivery Available
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Empty Cart State -->
+        <div id="cartEmptySection" class="empty-cart-state" style="display:none;">
+          <div class="empty-cart-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </div>
+          <h2 style="font-family:var(--font-heading); font-size:1.75rem; color:var(--color-primary); margin-bottom:0.5rem;">Your Bag is Currently Empty</h2>
+          <p style="color:var(--color-text-muted); max-width:460px; margin:0 auto 1.5rem; font-size:0.95rem;">
+            Looks like you haven't added any outfits yet. Explore our collections or tap below to add our bestselling fleece hoodie to try checkout:
+          </p>
+          <div style="display:flex; justify-content:center; gap:0.85rem; flex-wrap:wrap;">
+            <a href="collections.html" class="btn btn-accent">Explore Collections</a>
+            <button type="button" class="btn btn-outline" onclick="if(window.WearXCart){ window.WearXCart.addSampleItem(); renderCart(); }">
+              + Add Sample Hoodie (₹1,299)
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Checkout Modal Dialog -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" style="display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(26,19,16,0.75);z-index:2000;padding:1.25rem;backdrop-filter:blur(4px);">
+    <div class="modal-card" style="background:#fff;border-radius:var(--radius-lg);max-width:540px;width:100%;max-height:92vh;overflow-y:auto;padding:2rem 1.5rem;position:relative;box-shadow:var(--shadow-xl);">
+      <button type="button" class="modal-close" id="closeCheckoutBtn" aria-label="Close dialog" style="position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;background:var(--color-beige);display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:700;color:var(--color-text-muted);">&times;</button>
+
+      <div class="lead-card__header">
+        <span class="section-eyebrow">Fast 3-Click Checkout</span>
+        <h3 id="checkout-title" class="lead-card__title">Complete Your WearX Order</h3>
+        <p class="lead-card__subtitle">Enter your delivery address in Delhi NCR or anywhere in India.</p>
+      </div>
+
+      <form id="checkoutOrderForm" novalidate>
+        <div class="form-group">
+          <label for="order-name" class="form-label">Full Name <span class="req">*</span></label>
+          <input type="text" id="order-name" name="name" class="form-control" placeholder="e.g., Rohan Mehra" required>
+        </div>
+
+        <div class="form-group">
+          <label for="order-phone" class="form-label">10-Digit Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="order-phone" name="phone" class="form-control" placeholder="e.g., 9599783742" maxlength="10" required>
+          <div class="form-help">Delivery rider will contact on this number.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-email" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="order-email" name="email" class="form-control" placeholder="e.g., sahilgoyal7437@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="order-address" class="form-label">Delivery Street Address &amp; House No. <span class="req">*</span></label>
+          <textarea id="order-address" name="address" class="form-control" rows="2" placeholder="e.g., House 44, Block C, Vasant Kunj, Southwest Delhi" required></textarea>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div class="form-group">
+            <label for="order-city" class="form-label">City / Region</label>
+            <input type="text" id="order-city" name="city" class="form-control" value="Delhi NCR" required>
+          </div>
+          <div class="form-group">
+            <label for="order-pincode" class="form-label">Pincode <span class="req">*</span></label>
+            <input type="text" id="order-pincode" name="pincode" class="form-control" placeholder="110070" maxlength="6" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Payment Method</label>
+          <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.25rem;">
+            <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; cursor:pointer;">
+              <input type="radio" name="paymentMethod" value="COD" checked>
+              <strong>Cash on Delivery (COD)</strong> — Pay at your doorstep
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; cursor:pointer;">
+              <input type="radio" name="paymentMethod" value="UPI">
+              <strong>UPI / QR Code</strong> — Pay upon delivery or online
+            </label>
+          </div>
+        </div>
+
+        <div style="background:var(--color-beige); padding:1rem; border-radius:var(--radius-sm); margin:1.25rem 0; font-size:0.9rem;">
+          <div style="display:flex; justify-content:space-between; font-weight:800;">
+            <span>Payable Amount:</span>
+            <span id="modalPayableAmount" style="color:var(--color-accent);">₹0</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-block" id="confirmOrderBtn">
+          Confirm &amp; Place Order
+        </button>
+        <div class="form-feedback" id="orderFeedback" role="alert" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 1rem;">
+            <div class="brand__icon" aria-hidden="true">W</div>
+            <div class="brand__text">
+              <span class="brand__name" style="color: #fff;">WearX</span>
+              <span class="brand__tagline" style="color: #94a3b8;">Wear the Vibe</span>
+            </div>
+          </div>
+          <p>Southwest Delhi's freshest fashion brand. Curated casual, ethnic, sportswear, party, and winter collections for men &amp; women who refuse to blend in.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="collections.html" class="footer-link">All Collections</a></li>
+            <li><a href="about.html" class="footer-link">About WearX</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul class="footer-links">
+            <li><a href="collections.html#casual" class="footer-link">Casual Wear</a></li>
+            <li><a href="collections.html#ethnic" class="footer-link">Ethnic Wear</a></li>
+            <li><a href="collections.html#sportswear" class="footer-link">Sportswear</a></li>
+            <li><a href="collections.html#party" class="footer-link">Party Wear</a></li>
+            <li><a href="collections.html#winter" class="footer-link">Winter Wear</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><span class="footer-link">📍 Shop Number 11, Ground Floor, near Dashrathpuri Metro Station, Southwest Delhi</span></li>
+            <li><a href="tel:+919599783742" class="footer-link">📞 +91 95997 83742</a></li>
+            <li><a href="mailto:sahilgoyal7437@gmail.com" class="footer-link">✉️ sahilgoyal7437@gmail.com</a></li>
+            <li><span class="footer-link">🕐 Mon-Sat: 10 AM – 6 PM | Sun: 11 AM – 4 PM</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 WearX. All Rights Reserved. Southwest Delhi, India.</div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="contact.html">Store Locator</a>
+          <span>•</span>
+          <a href="cart.html">View Cart</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2.2"></script>
+  <script>
+    var currentDiscountPercent = 0;
+
+    function renderCart() {
+      if (!window.WearXCart) return;
+      var cart = window.WearXCart.getItems();
+      var filledSec = document.getElementById('cartFilledSection');
+      var emptySec = document.getElementById('cartEmptySection');
+      var tbody = document.getElementById('cartTableBody');
+
+      if (!cart || cart.length === 0) {
+        if (filledSec) filledSec.style.display = 'none';
+        if (emptySec) emptySec.style.display = 'block';
+        return;
+      }
+
+      if (emptySec) emptySec.style.display = 'none';
+      if (filledSec) filledSec.style.display = 'block';
+
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      var subtotal = 0;
+
+      cart.forEach(function (item) {
+        var price = parseFloat(item.price) || 0;
+        var qty = parseInt(item.qty, 10) || 1;
+        var itemSub = price * qty;
+        subtotal += itemSub;
+
+        var tr = document.createElement('tr');
+        var imgSrc = item.image || 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=100&h=120&fit=crop&q=80';
+        tr.innerHTML = `
+          <td>
+            <div class="cart-item-info">
+              <img src="${imgSrc}" alt="${item.name}" class="cart-item-thumb">
+              <div>
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-variant">${item.category || 'WearX'} • Size: <strong>${item.size || 'M'}</strong></div>
+              </div>
+            </div>
+          </td>
+          <td><strong>₹${price.toLocaleString('en-IN')}</strong></td>
+          <td>
+            <div class="qty-control">
+              <button type="button" class="qty-btn" onclick="window.updateItemQty('${item.id}', '${item.size}', ${qty - 1})">−</button>
+              <input type="text" class="qty-value" value="${qty}" readonly>
+              <button type="button" class="qty-btn" onclick="window.updateItemQty('${item.id}', '${item.size}', ${qty + 1})">+</button>
+            </div>
+          </td>
+          <td><strong>₹${itemSub.toLocaleString('en-IN')}</strong></td>
+          <td>
+            <button type="button" class="cart-remove-btn" onclick="window.removeItem('${item.id}', '${item.size}')" title="Remove Item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update Summary
+      var delivery = (subtotal >= 999 || subtotal === 0) ? 0 : 99;
+      var discount = Math.round(subtotal * (currentDiscountPercent / 100));
+      var total = subtotal - discount + delivery;
+
+      var elSubtotal = document.getElementById('summarySubtotal');
+      var elDelivery = document.getElementById('summaryDelivery');
+      var elDiscountRow = document.getElementById('discountRow');
+      var elDiscount = document.getElementById('summaryDiscount');
+      var elTotal = document.getElementById('summaryTotal');
+      var elModalAmount = document.getElementById('modalPayableAmount');
+
+      if (elSubtotal) elSubtotal.textContent = '₹' + subtotal.toLocaleString('en-IN');
+      if (elDelivery) elDelivery.textContent = delivery === 0 ? 'FREE' : '₹' + delivery;
+
+      if (discount > 0 && elDiscountRow) {
+        elDiscountRow.style.display = 'flex';
+        if (elDiscount) elDiscount.textContent = '-₹' + discount.toLocaleString('en-IN');
+      } else if (elDiscountRow) {
+        elDiscountRow.style.display = 'none';
+      }
+
+      if (elTotal) elTotal.textContent = '₹' + total.toLocaleString('en-IN');
+      if (elModalAmount) elModalAmount.textContent = '₹' + total.toLocaleString('en-IN');
+    }
+
+    window.updateItemQty = function(id, size, qty) {
+      if (!window.WearXCart) return;
+      if (qty <= 0) {
+        window.WearXCart.removeItem(id, size);
+      } else {
+        window.WearXCart.updateQty(id, size, qty);
+      }
+      renderCart();
+    };
+
+    window.removeItem = function(id, size) {
+      if (!window.WearXCart) return;
+      window.WearXCart.removeItem(id, size);
+      renderCart();
+    };
+
+    function initCartPage() {
+      if (window.WearXCart) {
+        window.WearXCart.updateBadge();
+      }
+      renderCart();
+
+      // Coupon application
+      var couponBtn = document.getElementById('applyCouponBtn');
+      if (couponBtn && !couponBtn.dataset.bound) {
+        couponBtn.dataset.bound = 'true';
+        couponBtn.addEventListener('click', function () {
+          var input = document.getElementById('couponInput');
+          var code = input ? input.value.trim().toUpperCase() : '';
+          var msg = document.getElementById('couponMsg');
+          if (msg) msg.style.display = 'block';
+
+          if (code === 'WEARX15') {
+            currentDiscountPercent = 15;
+            if (msg) {
+              msg.style.color = 'var(--color-olive)';
+              msg.textContent = '🎉 15% discount applied successfully!';
+            }
+            renderCart();
+          } else {
+            if (msg) {
+              msg.style.color = 'var(--color-danger)';
+              msg.textContent = 'Invalid promo code. Try WEARX15';
+            }
+          }
+        });
+      }
+
+      // Checkout Modal Open/Close
+      var modal = document.getElementById('checkoutModal');
+      var openBtn = document.getElementById('proceedCheckoutBtn');
+      var closeBtn = document.getElementById('closeCheckoutBtn');
+
+      if (openBtn && modal && !openBtn.dataset.bound) {
+        openBtn.dataset.bound = 'true';
+        openBtn.addEventListener('click', function () {
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+      }
+
+      if (closeBtn && modal && !closeBtn.dataset.bound) {
+        closeBtn.dataset.bound = 'true';
+        closeBtn.addEventListener('click', function () {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        });
+      }
+
+      // Checkout form submission
+      var orderForm = document.getElementById('checkoutOrderForm');
+      if (orderForm && !orderForm.dataset.bound) {
+        orderForm.dataset.bound = 'true';
+        orderForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var nameInput = document.getElementById('order-name');
+          var phoneInput = document.getElementById('order-phone');
+          var addrInput = document.getElementById('order-address');
+          var feedback = document.getElementById('orderFeedback');
+
+          var name = nameInput ? nameInput.value.trim() : '';
+          var phone = phoneInput ? phoneInput.value.trim() : '';
+          var addr = addrInput ? addrInput.value.trim() : '';
+
+          if (!name || !phone || !/^[6-9]\d{9}$/.test(phone) || !addr) {
+            alert('Please fill all required fields with a valid 10-digit mobile number.');
+            return;
+          }
+
+          var submitBtn = document.getElementById('confirmOrderBtn');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Placing Order...';
+          }
+
+          setTimeout(function () {
+            try {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'purchase',
+                ecommerce: {
+                  transaction_id: 'WX-' + Date.now().toString().slice(-6),
+                  value: window.WearXCart.getTotal(),
+                  currency: 'INR',
+                  items: window.WearXCart.getItems()
+                }
+              });
+            } catch (err) {}
+
+            window.WearXCart.clear();
+
+            orderForm.reset();
+            if (submitBtn) submitBtn.style.display = 'none';
+
+            if (feedback) {
+              feedback.className = 'form-feedback form-feedback--success is-active';
+              feedback.innerHTML = `
+                <strong>🎉 Order Placed Successfully!</strong>
+                <p style="margin:0.5rem 0 0.85rem; font-size:0.9rem;">
+                  Thank you, <strong>${name}</strong>! Your order has been scheduled for dispatch. Expected delivery in Southwest Delhi within <strong>24 hours</strong>.
+                </p>
+                <a href="https://wa.me/919599783742?text=Hi%20WearX!%20I%20just%20placed%20order%20for%20${encodeURIComponent(name)}." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-sm" 
+                   style="background:#25d366; color:#fff; display:inline-flex;">
+                   Get Delivery Updates on WhatsApp
+                </a>
+              `;
+            }
+
+            setTimeout(function () {
+              renderCart();
+            }, 3000);
+          }, 800);
+        });
+      }
+    }
+
+    // Run immediately and attach lifecycle listeners
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCartPage);
+    } else {
+      initCartPage();
+    }
+    window.addEventListener('pageshow', initCartPage);
+    window.addEventListener('cart-updated', renderCart);
+    window.addEventListener('storage', renderCart);
+  </script>
+  </script>
+</body>
+</html>
